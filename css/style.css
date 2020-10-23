@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 *{
     margin:0;
     padding:0;
@@ -29,6 +29,7 @@ body{
     padding:10px 40px;
     border-right:1px solid gray;
     margin-right:50px;
+    width:100%;
 }
 .rightSection{
     grid-area: rightContainer;
@@ -226,7 +227,78 @@ body{
 .bottomStyle{
     display: flex;
     justify-content: space-between;
+    align-items:center;
     height: 100%;
+    font-size: 1em;
 }
 
+@media screen and (max-width:1440px){
+    .bottomRight-buttons button{
+        width:120px;
+        height: 30px;
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width:1024px){
+    .bottomContainer{
+        padding:20px 20px 0;
+    }
+    .bottomContainer .bottomTittle{
+        margin:30px 0;
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .bottomRight-price{
+        align-items:center;
+        font-size: 1.2em;
+    }
+    .bottomRight-buttons{
+        align-items:center;
+    }
+    .bottomRight-buttons button{
+        width:80px;
+        height: 30px;
+        font-size: 0.6em;
+    }
+    .social{
+        width: 50%;
+    }
+    .social .icons{
+        font-size:1.2em;
+    }
+    .bottomRight-details{
+        padding-right: 10px;
+    }
+    .bottomRight-terms {
+        padding-left:20px;
+    }
+    
+}
+@media screen and (max-width:768px){
+    .gridContainer{
+        max-width:767px;
+    }
+    .leftSection{
+        padding:5px 20px;
+        margin-right:10px;
+    } 
+    .downSpacing{ 
+         width:100%;
+     }
+     /* Bottom Right Container */
+     .rightSection .bottomRight{
+        grid-template-rows: 50% repeat(2,20%) 10%;
+        grid-template-areas: "description description"
+                            "price price"
+                            "buttons buttons"
+                            "details terms";
+    }
+    .bottomRight-price{
+        justify-content: center;
+    }
+    
+    .bottomStyle{
+        font-size: 0.65em;
+    }
+}
 
